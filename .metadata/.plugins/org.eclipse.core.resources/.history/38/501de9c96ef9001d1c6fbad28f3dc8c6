@@ -1,0 +1,5 @@
+package com.proyecto01.proyecto.repository;
+
+public interface ClienteRepository {
+
+}

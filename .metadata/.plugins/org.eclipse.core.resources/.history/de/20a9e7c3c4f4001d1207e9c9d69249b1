@@ -1,0 +1,29 @@
+package com.proyecto01.proyecto.entity;
+
+public class Insumos {
+	String suministro;
+	String tipos;
+	public Insumos() {
+		super();
+	}
+	public Insumos(String suministro, String tipos) {
+		super();
+		this.suministro = suministro;
+		this.tipos = tipos;
+	}
+	public String getSuministro() {
+		return suministro;
+	}
+	public void setSuministro(String suministro) {
+		this.suministro = suministro;
+	}
+	public String getTipos() {
+		return tipos;
+	}
+	public void setTipos(String tipos) {
+		this.tipos = tipos;
+	}
+	
+	
+
+}
