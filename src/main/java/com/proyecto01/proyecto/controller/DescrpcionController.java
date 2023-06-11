@@ -1,5 +1,4 @@
 package com.proyecto01.proyecto.controller;
-
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,28 +10,30 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.proyecto01.proyecto.entity.Insumos;
-import com.proyecto01.proyecto.service.InsumosService;
+import com.proyecto01.proyecto.entity.Descripcion;
+import com.proyecto01.proyecto.service.DescripcionService;
 @RestController
-@RequestMapping("/insumos")
-public class InsumosController {
+@RequestMapping("/descrpicion")
+public class DescrpcionController {
+	
 	@Autowired
-	InsumosService i;
+	DescripcionService de;
 	@PostMapping
-	public Insumos actualizar(@RequestBody Insumos a) {
-		return i.registrar(a);
+	public Descripcion guardar(@RequestBody Descripcion a) {
+		return de.registrar(a);
 	}
 	@PutMapping
-	
-	public Insumos registrar(@RequestBody Insumos a) {
-		return i.actualizar(a);
+	public Descripcion actalizar(@RequestBody Descripcion a) {
+		return de.actualizar(a);
 	}
 	@DeleteMapping
-	public void eleminar(@RequestBody Insumos a) {
-		i.eliminar(a);
+	public void eleminar(@RequestBody Descripcion a) {
+		de.eliminar(a);
 	}
 	@GetMapping
-	public List<Insumos> vermas(){
-		return i.ver();
+	public List<Descripcion> veras(){
+		return de.ver();
 	}
-}
+	}
+
+

@@ -11,30 +11,28 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.proyecto01.proyecto.entity.Ticket;
-import com.proyecto01.proyecto.service.TicketService;
-
+import com.proyecto01.proyecto.entity.Reseña;
+import com.proyecto01.proyecto.service.ResenaService;
 @RestController
-@RequestMapping("/ticket")
-
-public class TicketController {
-@Autowired
-TicketService t;
-@PutMapping
-public Ticket aactualizar  (@RequestBody Ticket a) {
-	return t.actualizar(a);
-}
-@PostMapping
-public Ticket desc  (@RequestBody Ticket a) {
-	return t.registrar(a);
+@RequestMapping("/Reseña")
+public class ResenaController {
+	@Autowired
+	ResenaService x;
 	
+	@PostMapping
+	public Reseña guardar (@RequestBody Reseña a) {
+		return x.registrar(a);
+	}
+	@PutMapping
+	public Reseña actualizar   (@RequestBody Reseña a) {
+		return x.actualizar(a);
 }
-@DeleteMapping
-public void eleknar (@RequestBody Ticket a) {
-	 t.eliminar(a);
-}
-@GetMapping
-public List<Ticket> vert() {
-	return t.ver();
-}
+	@DeleteMapping
+	public void eleminar (@RequestBody Reseña a) {
+		x.borrar(a);;
+	}
+	@GetMapping
+	public List<Reseña> verc(){
+		return x.consultar();
+	}
 }
