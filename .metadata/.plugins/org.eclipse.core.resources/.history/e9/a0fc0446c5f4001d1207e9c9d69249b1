@@ -1,0 +1,67 @@
+package com.proyecto01.proyecto.entity;
+
+public class Descripcion {
+	String desayuno;
+	String almuerzo;
+	String cena;
+	String bebidas;
+	String extra;
+
+	public Descripcion() {
+		super();
+	}
+
+	public Descripcion(String desayuno,String almuerzo,String cena,String bebidas,
+	String extra) {
+		this.desayuno=desayuno;
+		this.almuerzo=almuerzo;
+		this.cena=cena;
+		this.bebidas=bebidas;
+		this.extra=extra;
+		
+	}
+
+	public String getDesayuno() {
+		return desayuno;
+	}
+
+	public void setDesayuno(String desayuno) {
+		this.desayuno = desayuno;
+	}
+
+	public String getAlmuerzo() {
+		return almuerzo;
+	}
+
+	public void setAlmuerzo(String almuerzo) {
+		this.almuerzo = almuerzo;
+	}
+
+	public String getCena() {
+		return cena;
+	}
+
+	public void setCena(String cena) {
+		this.cena = cena;
+	}
+
+	public String getBebidas() {
+		return bebidas;
+	}
+
+	public void setBebidas(String bebidas) {
+		this.bebidas = bebidas;
+	}
+
+	public String getExtra() {
+		return extra;
+	}
+
+	public void setExtra(String extra) {
+		this.extra = extra;
+	}
+	
+	
+	
+
+}
